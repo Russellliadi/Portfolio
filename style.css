@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(Fonts/HIROMISAKE.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url("Images/background\ image3.png") repeat center center;
+    background-size: 150px 150px;
+    background-color: rgb(52, 52, 52);
+}
+
+body {
+    font-family: 'MyFont', sans-serif;
+}
+
+#Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px);    
+
+    opacity: 0;
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+header {
+    background-color: rgb(46, 46, 46);
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.portfolio-image-container {
+    align-self: self-start;
+    background: url(Images/ProfileImage.png) no-repeat center center;
+    background-size: cover;
+    width: 3.25%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    border-radius: 90px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.textItems {
+    align-self: self-start;
+    width: 10%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 4.5%;
+}
+
+.topLayer {
+    align-self: self-start;
+    position: absolute;
+    margin-top: 5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.bottomLayer {
+    align-self: self-start;
+    position: absolute;
+    margin-top: 25px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Roblox {
+    background: url(Images/Roblox.png) no-repeat center center;
+    background-size: cover;
+    align-self: self-start;
+    position: absolute;
+    margin-top: 45px;
+    width: 15%;
+    height: 25px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Youtube {
+    background: url(Images/Youtube.png) no-repeat center center;
+    background-size: cover;
+    align-self: self-start;
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 17.5%;
+    width: 15%;
+    height: 25px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Roblox:hover {
+    transform: scale(1.05);
+}
+
+.Youtube:hover {
+    transform: scale(1.05);
+}
+
+.buttonHolder {
+    align-self: auto;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.Button {
+    background-color: purple;
+    border-radius: 20px;
+    border-color: rgb(178, 0, 178);
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    width: 20%;
+    height: 60%;
+    font-family: 'MyFont', sans-serif;
+    font-weight: 900;
+    font-size: large;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.Button:hover {
+    background-color: rgb(60, 0, 60);
+    transform: scale(1.05);
+    border-color: rgb(153, 1, 153);
+}
+
+.Button:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 163, 240, 0.949), 
+        transparent
+    );
+    transform: skewX(-20deg);
+    animation: streak 3s infinite; 
+}
+
+@keyframes streak {
+    0% { left: -150%; }
+    20% { left: 150%; } 
+    100% { left: 150%; }  
+}
+
+/* About Page */
+#About {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    position: fixed;
+}
+
+.Information {
+    font-weight: 900;
+    position: fixed;
+    background-color: rgb(26, 26, 26);
+    width: 35%;
+    height: 75%;
+    align-items: center;
+    align-self: self-start;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.infortmationTitle {
+    position: absolute;
+    align-self: self-start;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    -webkit-text-fill-color: rgb(255, 0, 183);
+}
+
+.closeButton {
+    position: absolute;
+    align-self: self-start;
+    top: 5%;
+    left: 95%;
+    --center: translate(-50%, -50%); 
+    transform: var(--center);
+    width: 8%;
+    height: 7%;
+    font-size: xx-large;
+    background: linear-gradient(225deg, #ff0000, #ff6363, #ff0000);
+    border-color: #ff0000;
+}
+
+.closeButton:hover {
+    transform: var(--center) scale(1.1);
+    opacity: 0.5;
+}
+
+.ScrollingFrame {
+    height: 90%;
+    width: 97.5%;
+    margin-top: 50px; 
+    overflow-y: scroll;
+    position: relative;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+.informationParagraph {
+    align-self: self-start;
+    font-size: x-large;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    width: 95%;
+    height: 20%;
+}
+
+.Specialties {
+    align-self: self-start;
+    -webkit-text-fill-color: rgb(255, 0, 183);
+    font-size: xx-large;
+}
+
+.specialtiesList {
+    align-self: self-start;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    transform: none;
+    font-size: large;
+}
+
+.Pricing {
+    align-self: self-start;
+    -webkit-text-fill-color: rgb(255, 0, 183);
+    font-size: xx-large;
+}
+
+.pricingList {
+    align-self: self-start;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+.Scripting {
+    -webkit-text-fill-color: purple;
+}
+
+.gui {
+    -webkit-text-fill-color: purple;
+}
+
+/* Scripting Page */
+.FirstPersonSniperSystem,
+.InventorySystem,
+.OpeningCrateSystem,
+.BrawlStarsOpeningSystem {
+    width: 90%;     
+    height: 425px;
+}
+
+#video1, #video2, #video3, #video4 {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#title1, #title2, #title3, #title4 {
+    -webkit-text-fill-color: white;
+}
+
+.ScriptingTitle {
+    background: linear-gradient(90deg,
+     transparent,
+      rgb(25, 25, 25) 50%,
+       rgb(25, 25, 25),
+        rgb(25, 25, 25) 50%,
+           transparent);
+
+    clip-path: polygon(
+        0% 0%,   
+        50% 5%,  
+        100% 0%,    
+        100% 100%,   
+        50% 95%,     
+        0% 100%      
+    );
+
+    margin-top: 2.5%;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.STitle {
+    background-color: transparent;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.ScriptingStuff {
+    background-color: transparent;
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 2.5%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+@media (max-width: 1200px) {
+    .ScriptingStuff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .ScriptingStuff {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Gui */
+.Gui {
+    width: 90%;     
+    height: 425px;
+    background-color: red;
+}
+
+.GuiTitle {
+    background: linear-gradient(90deg,
+     transparent,
+      rgb(25, 25, 25) 50%,
+       rgb(25, 25, 25),
+        rgb(25, 25, 25) 50%,
+           transparent);
+
+    clip-path: polygon(
+        0% 0%,   
+        50% 5%,  
+        100% 0%,    
+        100% 100%,   
+        50% 95%,     
+        0% 100%      
+    );
+
+    margin-top: 2.5%;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.GTitle {
+    background-color: transparent;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.GuiStuff {
+    background-color: transparent;
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 2.5%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+@media (max-width: 1200px) {
+    .GuiStuff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .GuiStuff {
+        grid-template-columns: 1fr;
+    }
+}

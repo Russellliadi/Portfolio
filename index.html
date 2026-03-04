@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://www.dafont.com/">
+</head>
+<body>
+    <div id="Overlay"></div>
+    <header id="header1">
+        <div class="portfolio-image-container"></div>
+        <div class="textItems">
+            <h2 class="topLayer">MIRACLES</h2>
+            <h3 class="bottomLayer">PORTFOLIO</h3>
+            <form action="https://www.roblox.com/users/2595959469/profile">
+                <button class="Roblox"></button>
+            </form>
+            <form action="https://www.youtube.com/@cap_dark">
+                <button class="Youtube"></button>
+            </form>
+        </div>
+        <div class="buttonHolder">
+            <button onclick="updateOpacityForAbout()" class="Button About">About</button>
+            <button onclick="goToSciptingSection()" class="Button scriptings">Scripting</button>
+            <button onclick="goToGuiSection()" class="Button Guis">Gui</button>
+        </div>
+    </header>
+    
+    <section id="About">
+        <div class="Information">
+            <h1 class="infortmationTitle">ABOUT</h1>
+            <button onclick="updateCloseButton()" class="closeButton">X</button>
+            <div class="ScrollingFrame">
+                <div class="About">
+                    <p class="informationParagraph">Hey, I've been a Roblox Developer for the past 7 months. It might not 
+                    seem like much but before starting roblox studio I have experience with different programming languages
+                    and improving everyday. I hope to work together soon🙏!
+                    </p>
+                    <h2 class="Specialties">SPECIALTIES:</h2>
+                    <ol class="specialtiesList">
+                        <li>Frontend Development</li>
+                        <li>Backend Development</li>
+                        <li>Gui</li>
+                    </ol>         
+                    <h2 class="Pricing">PRICING:</h2>
+                    <ol class="pricingList">
+                        <li>(I only take Robux)</li>
+                        <li class="Scripting">Scripting:</li>
+                        <li>Small Task: 2.5k - 5k</li>
+                        <li>Bug Fixing (Depends on severity of Bugs): 2.5k+</li>
+                        <li>Entire Systems: 10k+</li>
+                        <li>Small Game: 50k+</li>
+                        <li class="gui">Gui:</li>
+                        <li>Low Poly Gui: 500 - 1k</li>
+                        <li>Mid - High Poly Gui: 2.5k+</li>
+                        <li>Still open to a lot more! Just depends on how heavy the task is vs the payment.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ScriptingPage">
+        <div class="ScriptingTitle">
+            <h1 class="STitle">Scripting</h1>
+        </div>
+        <div class="ScriptingStuff">
+            <div class="FirstPersonSniperSystem">
+                <h2 id="title1">First Person Sniper System</h2>
+                <video id="video1" controls>
+                    <source src="Videos/Screen Recording 2026-02-23 150444.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="InventorySystem">
+                <h2 id="title2">Inventory System</h2>
+                <video id="video2" controls>
+                    <source src="Videos/Inventory Video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="OpeningCrateSystem">
+                <h2 id="title3">Opening Crate System</h2>
+                <video id="video3" controls>
+                    <source src="Videos/OpeningCrate Video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="BrawlStarsOpeningSystem">
+                <h2 id="title4">Brawl Stars Opening System</h2>
+                <video id="video4" controls>
+                    <source src="Videos/Screen Recording 2026-02-23 150444.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="GuiPage">
+        <div class="GuiTitle">
+            <h1 class="GTitle">Gui</h1>
+        </div>
+        <div class="GuiStuff">
+            <div class="Gui img1">
+                <div class="img-1"></div>
+            </div>
+            <div class="Gui img2">
+                <div class="img-2"></div>
+            </div>
+            <div class="Gui img3">
+                <div class="img-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
