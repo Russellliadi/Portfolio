@@ -112,10 +112,12 @@ header {
 
 .Roblox:hover {
     transform: scale(1.05);
+    opacity: 0.5;
 }
 
 .Youtube:hover {
     transform: scale(1.05);
+    opacity: 0.5;
 }
 
 .buttonHolder {
