@@ -440,3 +440,13 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
+.img1 {
+    background: url(Guis/Gui3.png) no-repeat center center;
+    background-size: contain;
+}
+
+.img2 {
+    background: url(Guis/Gui4.png) no-repeat center center;
+    background-size: contain;
+}
